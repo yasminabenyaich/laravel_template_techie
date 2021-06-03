@@ -14,7 +14,9 @@ class AboutController extends Controller
      */
     public function index()
     {
-        //
+        $abouts= About::all();
+        return view("backoffice.about.all",compact('abouts'));
+    
     }
 
     /**
@@ -24,7 +26,7 @@ class AboutController extends Controller
      */
     public function create()
     {
-        //
+        return view("backoffice.about.create");
     }
 
     /**
@@ -35,7 +37,13 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $about = new About;
+        $about->titre = $request->titre;
+        $about->description = $request->description;
+        $about->update_at=now();
+        $about->save();
+
+        return redirect()->route("abouts");
     }
 
     /**
@@ -46,7 +54,7 @@ class AboutController extends Controller
      */
     public function show(About $about)
     {
-        //
+        
     }
 
     /**
@@ -55,9 +63,11 @@ class AboutController extends Controller
      * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function edit(About $about)
+    public function edit($id)
     {
-        //
+        $about = About::find($id);{
+            return view("backoffice.about.edit",compact("about"));
+        }
     }
 
     /**
@@ -67,9 +77,16 @@ class AboutController extends Controller
      * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, About $about)
+    public function update($id, Request $request)
     {
-        //
+        $about= About::find($id);
+
+        $about->titre = $request->titre;
+        $about->description = $request->description;
+        $about->update_at=now();
+        $about->save();
+
+        return redirect()->route("abouts");
     }
 
     /**
@@ -78,8 +95,9 @@ class AboutController extends Controller
      * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function destroy(About $about)
+    public function destroy($id)
     {
-        //
+        $about= About::find($id);
+        return redirect()->back();
     }
 }
