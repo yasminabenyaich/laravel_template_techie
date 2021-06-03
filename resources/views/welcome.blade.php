@@ -18,7 +18,7 @@
 
   <!-- Vendor CSS Files -->
   <link href={{asset('css/aos.css')}} rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href={{asset('css/bootstrap.min.css')}} rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
 
   <!-- Template Main CSS File -->
   <link rel="stylesheet" href={{asset ('css/style.css')}}>
-  <link  rel="stylesheet"  href= {{  asset("css/app.css") }}>
+  <link  rel="stylesheet"  href= {{  asset('css/app.css') }}>
 
   <!-- =======================================================
   * Template Name: Techie - v4.1.0
