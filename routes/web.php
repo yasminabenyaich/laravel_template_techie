@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ServiceController;
+use App\Models\Service;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/backHome',function(){
+    return view("backoffice.partial.backHome");
+})->name("backOffice");
 
+Route::resource("/service",ServiceController::class);

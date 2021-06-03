@@ -14,7 +14,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+        $services= Service::all();
+        return view("backoffice.service.all",compact('services'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view("backoffice.service.create");
     }
 
     /**
@@ -35,7 +36,14 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $service = new Service;
+        $service->titre = $request->titre;
+        $service->icone = $request->icone;
+        $service->description = $request->description;
+        $service->created_at=now();
+        $service->save();
+
+    return redirect()->route("services");
     }
 
     /**
@@ -55,9 +63,12 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit($id)
     {
-        //
+        $service = Service::find($id);{
+            return view("backoffice.service.edit",compact("service"));
+        }
+
     }
 
     /**
@@ -67,9 +78,17 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Service $service)
+    public function update($id, Request $request)
     {
-        //
+        $service= Service::find($id);
+
+        $service->titre = $request->titre;
+        $service->icone = $request->icone;
+        $service->description = $request->description;
+        $service->update_at=now();
+        $service->save();
+
+        return redirect()->route("services");
     }
 
     /**
@@ -78,8 +97,11 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Service $service)
+    public function destroy($id)
     {
-        //
+        $service= Service::find($id);
+        $service->delete();
+        return redirect()->back();
+
     }
 }
