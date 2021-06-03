@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href={{asset('img/favicon.png') }} rel="icon">
+  <link href={{asset('img/apple-touch-icon.png') }} rel="apple-touch-icon">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -75,16 +75,13 @@
 
   </section><!-- End Hero -->
 
-  <main id="main">
-
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
 
-<<<<<<< HEAD
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src={{ asset('img/about.jpg') }} class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
             <h3>Voluptatem dignissimos provident quasi corporis</h3>
@@ -100,15 +97,6 @@
             <a href="#" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
           </div>
         </div>
-=======
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Portfolio Details</li>
-          </ol>
-        </div>  
->>>>>>> a28a0ac417ff12544ffdd1c3c23c3e606aed26af
 
       </div>
     </section><!-- End About Section -->
@@ -180,7 +168,6 @@
             </div>
           </div>
 
-<<<<<<< HEAD
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box iconbox-pink">
               <div class="icon">
@@ -219,19 +206,6 @@
               <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
             </div>
           </div>
-=======
-                <div class="swiper-slide">
-                  <img src={{asset('img/portfolio/portfolio-1.jpg')}}alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src={{asset('img/portfolio/portfolio-2.jpg')}}alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src={{asset('img/portfolio/portfolio-3.jpg')}}alt="">
-                </div>
->>>>>>> a28a0ac417ff12544ffdd1c3c23c3e606aed26af
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box iconbox-teal">
@@ -270,7 +244,7 @@
                   Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <img src={{asset('img/testimonials/testimonials-1.jpg')}} class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
               </div>
@@ -283,7 +257,7 @@
                   Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <img src={{asset('img/testimonials/testimonials-2.jpg') }} class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
               </div>
@@ -296,7 +270,7 @@
                   Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <img src={{asset('img/testimonials/testimonials-3.jpg') }} class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
                 <h4>Store Owner</h4>
               </div>
@@ -309,7 +283,7 @@
                   Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <img src={{asset('img/testimonials/testimonials-4.jpg') }} class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
                 <h4>Freelancer</h4>
               </div>
@@ -322,7 +296,7 @@
                   Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <img src={{asset('img/testimonials/testimonials-5.jpg')}} class="testimonial-img" alt="">
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
               </div>
@@ -501,11 +475,7 @@
   <script src={{ asset('js/swiper-bundle.min.js')}}></script>
 
   <!-- Template Main JS File -->
-<<<<<<< HEAD
   <script src={{ asset('js/main.js') }}></script>
-=======
-  <script  src={{ asset("js/app.js") }}></script> 
->>>>>>> a28a0ac417ff12544ffdd1c3c23c3e606aed26af
 
 </body>
 
