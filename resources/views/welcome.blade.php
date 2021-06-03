@@ -12,7 +12,6 @@
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -82,6 +81,7 @@
     <section id="about" class="about">
       <div class="container">
 
+<<<<<<< HEAD
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
@@ -100,6 +100,15 @@
             <a href="#" class="read-more">Read More <i class="bi bi-long-arrow-right"></i></a>
           </div>
         </div>
+=======
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Portfolio Details</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Portfolio Details</li>
+          </ol>
+        </div>  
+>>>>>>> a28a0ac417ff12544ffdd1c3c23c3e606aed26af
 
       </div>
     </section><!-- End About Section -->
@@ -171,6 +180,7 @@
             </div>
           </div>
 
+<<<<<<< HEAD
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box iconbox-pink">
               <div class="icon">
@@ -209,6 +219,19 @@
               <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
             </div>
           </div>
+=======
+                <div class="swiper-slide">
+                  <img src={{asset('img/portfolio/portfolio-1.jpg')}}alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src={{asset('img/portfolio/portfolio-2.jpg')}}alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src={{asset('img/portfolio/portfolio-3.jpg')}}alt="">
+                </div>
+>>>>>>> a28a0ac417ff12544ffdd1c3c23c3e606aed26af
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box iconbox-teal">
@@ -478,7 +501,11 @@
   <script src={{ asset('js/swiper-bundle.min.js')}}></script>
 
   <!-- Template Main JS File -->
+<<<<<<< HEAD
   <script src={{ asset('js/main.js') }}></script>
+=======
+  <script  src={{ asset("js/app.js") }}></script> 
+>>>>>>> a28a0ac417ff12544ffdd1c3c23c3e606aed26af
 
 </body>
 
