@@ -25,7 +25,7 @@
 </head>
 <body>
 
-    @yield('content');
+    @yield('content')
 
     {{-- Mettre les links --}}
     <!-- Vendor JS Files -->
