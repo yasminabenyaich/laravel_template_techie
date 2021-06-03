@@ -15,6 +15,9 @@ class CreateCountsTable extends Migration
     {
         Schema::create('counts', function (Blueprint $table) {
             $table->id();
+            $table->integer('chiffre');
+            $table->string('titre');
+            $table->text('desription');
             $table->timestamps();
         });
     }
