@@ -24,7 +24,7 @@
   <link href={{ asset('css/swiper-bundle.min.css') }} rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href={{ asset('css/style.css') }}rel="stylesheet">
+  <link href={{ asset('css/style.css') }} rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Techie - v4.1.0
