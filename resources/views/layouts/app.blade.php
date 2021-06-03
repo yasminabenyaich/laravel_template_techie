@@ -8,11 +8,14 @@
     <title>Template</title>
 </head>
 <body>
-    @yield('content')
+    @include('partials.nav')
+    <section class="container my-5">
+        @yield('content')
+    </section>
 
     {{-- Mettre les links --}}
 
-    
+
     <script src={{ asset("js/app.js") }}></script>
 </body>
 </html>
