@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class count extends Model
 {
     use HasFactory;
+    protected $table = 'counts';
+
+    protected $fillable =[
+        'chiffre',
+        'titre',
+    ];
 }

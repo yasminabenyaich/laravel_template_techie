@@ -17,7 +17,6 @@ class CreateCountsTable extends Migration
             $table->id();
             $table->integer('chiffre');
             $table->string('titre');
-            $table->text('desription');
             $table->timestamps();
         });
     }
