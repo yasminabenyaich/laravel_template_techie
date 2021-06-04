@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServiceController;
 use App\Models\Service;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,4 @@ Route::get('/backHome',function(){
 })->name("backOffice");
 
 Route::resource("/service",ServiceController::class);
+Route::resource("/about", AboutController::class);
