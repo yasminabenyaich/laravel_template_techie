@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TestimonialController;
 use App\Models\Service;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,4 @@ Route::get('/backHome',function(){
 Route::resource("/service",ServiceController::class);
 
 Route::resource("/about", AboutController::class);
+Route::resource("/testimonial", TestimonialController::class);
