@@ -40,9 +40,10 @@ class TestimonialController extends Controller
     {
         //
         $testimonial = new Testimonial();
-        $testimonial->name = $request->description;
-        $testimonial->age = $request->pdp;
-        $testimonial->phone = $request->nom;$testimonial->phone = $request->job;
+        $testimonial->description = $request->description;
+        $testimonial->pdp = $request->pdp;
+        $testimonial->nom = $request->nom;
+        $testimonial->job = $request->job;
         $testimonial->created_at = now();
 
         $testimonial->save;
@@ -84,9 +85,10 @@ class TestimonialController extends Controller
     public function update(Request $request, Testimonial $testimonial)
     {
         //
-        $testimonial->name = $request->description;
-        $testimonial->age = $request->pdp;
-        $testimonial->phone = $request->nom;$testimonial->phone = $request->job;
+        $testimonial->description = $request->description;
+        $testimonial->pdp = $request->pdp;
+        $testimonial->nom = $request->nom;
+        $testimonial->job = $request->job;
         $testimonial->updated_at = now();
 
         $testimonial->save();
