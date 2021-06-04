@@ -34,12 +34,6 @@
 
                         <a class="btn btn-warning m-0" href={{ route('about.edit', $about->id)}}>Edit</a>
                     </div>
-                    <div>
-                        <form method="post" class="col m-0" action={{ route('about.destroy', $about->id)}} >
-                            @csrf 
-                            <button class="btn btn-danger text-white py-1 px-2" type="submit">Delete</button>
-                        </form>
-                    </div>
                 </div>
             </div>
 

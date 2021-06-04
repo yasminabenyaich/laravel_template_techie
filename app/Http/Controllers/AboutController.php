@@ -79,14 +79,6 @@ class AboutController extends Controller
      */
     public function update($id, Request $request)
     {
-        $about= About::find($id);
-
-        $about->titre = $request->titre;
-        $about->description = $request->description;
-        $about->update_at=now();
-        $about->save();
-
-        return redirect()->route("abouts");
     }
 
     /**
@@ -97,7 +89,6 @@ class AboutController extends Controller
      */
     public function destroy($id)
     {
-        $about= About::find($id);
-        return redirect()->back();
+       
     }
 }
