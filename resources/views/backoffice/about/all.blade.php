@@ -21,7 +21,7 @@
 
 
 
-        @foreach ($services as $service)
+        @foreach ($abouts as $about)
             
       
             <div class="row mt-2">
