@@ -24,10 +24,10 @@ class AboutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view("backoffice.about.create");
-    }
+    // public function create()
+    // {
+    //     return view("backoffice.about.create");
+    // }
 
     /**
      * Store a newly created resource in storage.
