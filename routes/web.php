@@ -23,3 +23,5 @@ Route::get('/backHome',function(){
 })->name("backOffice");
 
 Route::resource("/service",ServiceController::class);
+
+// Route Abouts
