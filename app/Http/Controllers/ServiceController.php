@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\count;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -63,11 +64,9 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Service $service)
     {
-        $service = Service::find($id);{
-            return view("backoffice.service.edit",compact("service"));
-        }
+        return view("backoffice.service.edit",compact("service"));
 
     }
 
@@ -78,9 +77,13 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update($id, Request $request)
+    public function update(Request $request, Service $service)
     {
-        $service= Service::find($id);
+       $request->validate([
+           "titre"=>"required",
+           "icone"=>"required",
+
+       ]);
 
         $service->titre = $request->titre;
         $service->icone = $request->icone;
@@ -97,9 +100,9 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Service $service)
     {
-        $service= Service::find($id);
+
         $service->delete();
         return redirect()->back();
 

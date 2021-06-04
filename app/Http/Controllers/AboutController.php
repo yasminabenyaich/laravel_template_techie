@@ -63,11 +63,9 @@ class AboutController extends Controller
      * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(About $about)
     {
-        $about = About::find($id);{
-            return view("backoffice.about.edit",compact("about"));
-        }
+        return view("backoffice.about.edit",compact("about"));
     }
 
     /**
@@ -77,9 +75,14 @@ class AboutController extends Controller
      * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function update($id, Request $request)
-    {
-    }
+     public function update(Request $request, About $about)
+     {
+        $request->validate([
+            "titre"=>"required",
+            "desription"=>"required",
+
+        ]);
+     }
 
     /**
      * Remove the specified resource from storage.
@@ -87,8 +90,9 @@ class AboutController extends Controller
      * @param  \App\Models\About  $about
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(About $about)
     {
-       
+       $about->delete();
+       return redirect()->back()->with('message','vous avez supprimé une équipe');
     }
 }
